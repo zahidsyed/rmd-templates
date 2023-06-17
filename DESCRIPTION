@@ -1,11 +1,10 @@
-Package: MyTemplates
+Package: RmdTemplates
 Type: Package
-Title: What the Package Does (Title Case)
+Title: 
 Version: 0.1.0
-Author: Who wrote it
+Author: Zahid Syed
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: A collection of templates for Rmd files to use in my CCDS-TDSP project structure
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
