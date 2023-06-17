@@ -1,0 +1,46 @@
+---
+title: "Model development"
+author: "Zahid Syed"
+website: "https://www.rstudio.com/"
+output:
+  html_document:
+    toc: true
+    fig_caption: true
+    template: template.html
+---
+
+```html
+&nbsp;
+<hr />
+<p style="text-align: center;">Author: $author$ </a></p>
+<p style="text-align: center;"><span style="color: #808080;"><em>$website$</em></span></p>
+```
+
+# About
+Describe the purpose of this notebook
+
+
+# Initialize
+Here is where you load 
+- Load all the dependencies required for the execution of the notebook. 
+- Load the necessary libraries 
+- Instantiate your functions/classes. 
+- Load the datafmodels/pipelines used in the notebook.
+
+## Load libraries
+
+## Instantiate functions
+
+### function_A
+
+## Load data, pipelines
+
+
+# Specific topic
+
+## Subtopic 1
+
+### Results
+
+
+# Conclusion
