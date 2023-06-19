@@ -2,11 +2,16 @@
 title: "Data prep"
 author: "Zahid Syed"
 website: "https://www.rstudio.com/"
+knit: (function(inputFile, encoding) {
+      out_dir <- "html";
+      rmarkdown::render(inputFile,
+                        encoding=encoding,
+                        output_dir=file.path(dirname(inputFile), out_dir))})
 output:
   html_document:
     toc: true
     fig_caption: true
-    template: template.html
+    number_sections: yes
 ---
 
 
