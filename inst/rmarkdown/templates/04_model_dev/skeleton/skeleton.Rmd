@@ -9,12 +9,6 @@ output:
     template: template.html
 ---
 
-```html
-&nbsp;
-<hr />
-<p style="text-align: center;">Author: $author$ </a></p>
-<p style="text-align: center;"><span style="color: #808080;"><em>$website$</em></span></p>
-```
 
 # About
 Describe the purpose of this notebook
