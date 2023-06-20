@@ -13,6 +13,10 @@ If you want to trial these templates within R Markdown, you can install the temp
 install.packages("devtools")
 devtools::install_github("zahidsyed/rmd-templates")
 ````
+# R package requirements
+- 'here'
+- 'knitr'
+- 'bookdown'
 
 # Inspiration
 Based off [Harper's templates](https://github.com/dr-harper/example-rmd-templates)
