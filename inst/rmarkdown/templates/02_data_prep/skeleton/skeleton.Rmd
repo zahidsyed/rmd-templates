@@ -1,5 +1,5 @@
 ---
-title: "Data prep"
+title: "data_prep"
 author: "Zahid Syed"
 website: "https://www.rstudio.com/"
 knit: (function(inputFile, encoding) {
@@ -17,64 +17,46 @@ output:
 
 <!-- DO NOT CHANGE BELOW -->
 
-<!-- Suppress warnings, messages -->
-```{r setup, include=FALSE} 
-knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
-```
+  <!-- Suppress warnings, messages in chunks -->
+	```{r setup, include=FALSE} 
+	knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+	```
 
-<!-- Setup working directories for this file, data, notebooks, src -->
-```{r, echo=FALSE}
-# rm(list = ls())
-library(here)
-dir$root <- here()
-dir$this <- getwd()
-dir$data.ext <- here("data/ext")
-dir$data.temp <- here("data/temp")
-dir$data.canon <- here("data/canon")
-dir$notebooks <- here("notebooks")
-dir$notebooks.exp <- here("notebooks/exploratory")
-dir$notebooks.rep <- here("notebooks/reports")
-dir$src.data_acq <- here("src/data_acq")
-dir$src.data_prep <- here("src/data_prep")
-dir$src.features <- here("src/features")
-dir$src.model_dev <- here("src/model_dev")
-```
+  <!-- Init dir paths -->
+
+	```{r, include=FALSE}
+	library(here)
+	source( file.path(here(), "src/init_rmd.R"), local = knitr::knit_global())
+	```
 
 <!-- DO NOT CHANGE ABOVE -->
 
 
-# Run an entire R script
-```{r, file=file.path(dir$root, "data_viz_with_R/target.R")}
-```
-
-
-# Run a code chunk from target script
-<!-- ## First, read the external script (reqd) -->
-```{r, include=FALSE, cache=FALSE}
-knitr::read_chunk(file.path(dir$root, "data_viz_with_R/target.R"))
-```
-
-<!-- ## Second, refer to the code chunk label -->
-```{r, cty-hwy, echo=FALSE}
-```
-
-<!-- # You can also run an entire R script using file.path -->
-<!-- ```{r, file=file.path(dirname(inputFile), "target.R")} -->
-<!-- ``` -->
-
-
+ 
 # About
 Describe the purpose of this notebook
 
-
 # Initialize
-Here is where you load 
-- Load all the dependencies required for the execution of the notebook. 
-- Load the necessary libraries 
-- Instantiate your functions/classes. 
-- Load the datafmodels/pipelines used in the notebook.
+<!-- 
+Here is where you 
+- Clear variables
+- Load libraries, dependencies
+- Instantiate your functions/classes
+- Load datafmodels/pipelines
+-->
 
-## Load libraries
+
+## Clear variables
+```{r}
+rm(list = ls())
+```
+
+## Load libraries, dependencies
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
 
 ## Instantiate functions
 
@@ -91,3 +73,18 @@ Here is where you load
 
 
 # Conclusion
+
+<!-- 
+# Run an entire R script
+https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html
+
+# Run a code chunk from target.R
+## First, read the external script (reqd)
+<!--   ```{r, include=FALSE, cache=FALSE}
+       knitr::read_chunk('target.R'))
+       ```
+## Second, refer to the code chunk label
+<!--   ```{r, cty-hwy, echo=FALSE}
+       ```
+-->
+
