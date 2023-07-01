@@ -18,16 +18,16 @@ output:
 <!-- DO NOT CHANGE BELOW -->
 
   <!-- Suppress warnings, messages in chunks -->
-	```{r setup, include=FALSE} 
-	knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
-	```
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
 
   <!-- Init dir paths -->
 
-	```{r, include=FALSE}
-	library(here)
-	source( file.path(here(), "src/init_rmd.R"), local = knitr::knit_global())
-	```
+```{r, include=FALSE}
+library(here)
+source( file.path(here(), "src/init_rmd.R"), local = knitr::knit_global())
+```
 
 <!-- DO NOT CHANGE ABOVE -->
 
@@ -37,15 +37,6 @@ output:
 Describe the purpose of this notebook
 
 # Initialize
-<!-- 
-Here is where you 
-- Clear variables
-- Load libraries, dependencies
-- Instantiate your functions/classes
-- Load datafmodels/pipelines
--->
-
-
 ## Clear variables
 ```{r}
 rm(list = ls())
@@ -53,9 +44,20 @@ rm(list = ls())
 
 ## Load libraries, dependencies
 ```{r}
-library(ggplot2)
-library(dplyr)
+# Data wrangling
+library(tidyverse)
+
+# Data viz
+library(ggrepel)
+library(ggtext)
+library(ggthemes)
+library(scales)
+
+# Color palettes
+library(okabeito)
+library(viridis)
 ```
+
 
 
 ## Instantiate functions
