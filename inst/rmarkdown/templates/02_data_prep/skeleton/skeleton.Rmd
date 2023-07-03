@@ -14,38 +14,35 @@ output:
     number_sections: yes
     keep_md: false
 ---
-
-<!-- DO NOT CHANGE BELOW -->
-
-  <!-- Suppress warnings, messages in chunks -->
-```{r setup, include=FALSE} 
-knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
-```
-
-  <!-- Init dir paths -->
-
-```{r, include=FALSE}
-library(here)
-source( file.path(here(), "src/init_rmd.R"), local = knitr::knit_global())
-```
-
-<!-- DO NOT CHANGE ABOVE -->
-
-
  
 # About
 Describe the purpose of this notebook
 
 # Initialize
+
 ## Clear variables
 ```{r}
-rm(list = ls())
+# rm(list = ls())
 ```
+
+<!-- DO NOT CHANGE BELOW -->
+<!--   Suppress warnings, messages in chunks -->
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+<!--   Init dir paths -->
+```{r, include=FALSE}
+library(here)
+source(file.path(here(), "src/init_r.R"), local = knitr::knit_global())
+```
+<!-- DO NOT CHANGE ABOVE -->
 
 ## Load libraries, dependencies
 ```{r}
 # Data wrangling
 library(tidyverse)
+library(magrittr)
 
 # Data viz
 library(ggrepel)
@@ -54,7 +51,6 @@ library(ggthemes)
 library(scales)
 
 # Color palettes
-library(okabeito)
 library(viridis)
 ```
 
@@ -77,7 +73,10 @@ library(viridis)
 # Conclusion
 
 <!-- 
-# Run an entire R script
+## Use directory
+read_csv(file.path(dir$data_ext, "foo.csv"))
+
+# Run an entire external R script
 https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html
 
 # Run a code chunk from target.R
@@ -88,5 +87,6 @@ https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html
 ## Second, refer to the code chunk label
 <!--   ```{r, cty-hwy, echo=FALSE}
        ```
+
 -->
 
